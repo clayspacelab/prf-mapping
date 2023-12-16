@@ -24,7 +24,7 @@ viewing_distance = 64.53 # assuming this from prisma measurements i made at NYU
 tr_length = 1.3 # 1300 ms per file name
 dtype = ctypes.c_int16 # for stimulus
 scale_factor = 1 # for speed
-resample_factor = 0.35 # for speed
+resample_factor = 0.84 # for speed
 
 # load stimulus
 bar = loadmat('Stimuli/bar_stimulus_masks_1300ms_images.mat')['images']
@@ -36,7 +36,7 @@ stimulus = VisualStimulus(bar, viewing_distance, native_width, scale_factor, tr_
 
 # load BOLD data
 # nii = nib.load('bar_seq_1_surf_25mm_mean_detrend.nii.gz')
-nii = nib.load('/Users/aditya/Documents/GitHub/prf-mapping/sample_data/JC/RF1/JC_RF1_vista/bar_seq_1_surf.nii.gz')
+nii = nib.load('/Users/aditya/Documents/GitHub/prf-mapping/sample_data/JC/RF1/JC_RF1_vista/bar_seq_1_ss5.nii.gz')
 dat = nii.get_fdata()
 # dat = np.asanyarray(nii.dataobj)
 
