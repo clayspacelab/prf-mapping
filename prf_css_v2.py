@@ -108,11 +108,11 @@ with mp.Pool(ncpu) as pool:
 	results = list(tqdm.tqdm(pool.imap(utils.parallel_fit, bundle), total=len(bundle)))
 
 # save results
-f = open('css_results.pkl', 'wb')
+f = open('results/css_results.pkl', 'wb')
 pickle.dump(results, f)
 
 # example of how to load the results
-f = open('css_results.pkl', 'rb')
+f = open('results/css_results.pkl', 'rb')
 results = pickle.load(f)
 
 # screen out failed fits
@@ -121,4 +121,4 @@ output = [r for r in results if r is not None]
 # save polar as nifti
 nifti = utils.recast_estimation_results(output, nii, overloaded=True)
 # nib.save(nifti, 'prf_css_polar_cerebralCortex_25mm_mean_detrend_8.nii.gz')
-nib.save(nifti, 'prf_css.nii.gz')
+nib.save(nifti, 'results/prf_css.nii.gz')
