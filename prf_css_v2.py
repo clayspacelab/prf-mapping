@@ -96,7 +96,8 @@ bounds = (x_bounds, y_bounds, sigma_bounds, n_bounds, beta_bounds, baseline_boun
 Ns = 10
 auto_fit = 1
 verbose = 0
-
+print(bold_psc.shape)
+print(bold_psc)
 print(Ns^len(grids))
 
 # gather
