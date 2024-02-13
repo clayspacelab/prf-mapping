@@ -36,7 +36,7 @@ stimulus = VisualStimulus(bar, viewing_distance, native_width, scale_factor, tr_
 
 # load BOLD data
 # nii = nib.load('bar_seq_1_surf_25mm_mean_detrend.nii.gz')
-nii = nib.load('/Users/aditya/Documents/GitHub/prf-mapping/sample_data/JC/RF1/JC_RF1_vista/bar_seq_1_ss5.nii.gz')
+nii = nib.load('sample_data/JC/RF1/JC_RF1_vista/bar_seq_1_ss5.nii.gz')
 dat = nii.get_fdata()
 # dat = np.asanyarray(nii.dataobj)
 
@@ -44,7 +44,7 @@ dat = nii.get_fdata()
 # mask = nib.load('cerebralcortex_mask_resampled_25mm.nii.gz').get_data() != 0
 # mask = nib.load('roi_hhl/bilat.V1V2V3.nii.gz').get_data() != 0
 # mask = nib.load('/Users/aditya/Documents/GitHub/prf-mapping/sample_data/JC/surfanat_brainmask_master.nii.gz').get_data() != 0
-mask = nib.load('/Users/aditya/Documents/GitHub/prf-mapping/sample_data/JC/surfanat_brainmask_master.nii.gz').get_fdata() != 0
+mask = nib.load('sample_data/JC/surfanat_brainmask_master.nii.gz').get_fdata() != 0
 [xi,yi,zi] = np.nonzero(mask)
 indices = [(xi[i],yi[i],zi[i]) for i in range(len(xi))]
 

@@ -1,3 +1,5 @@
-source /Local/Users/aditya/miniconda3/etc/profile.d/conda.sh
-conda activate myenv 
-python /home/aditya/prf-mapping/prf_css_v2.py
+#!/bin/bash
+
+source /ext3/miniconda3/etc/profile.d/conda.sh
+export PATH=/ext3/miniconda3/bin:$PATH
+export PYTHONPATH=/ext3/miniconda3/bin:$PATH
